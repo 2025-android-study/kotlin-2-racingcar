@@ -28,6 +28,7 @@ class RacingController {
         for(car in cars) {
             if(numPicker.pickNumber() >= Rule.GO_NUM) car.distance++
         }
+        output.printRacingResults(cars)
     }
 
     private fun getWinners(cars: List<Car>): List<Car> {

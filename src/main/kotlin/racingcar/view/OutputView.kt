@@ -11,7 +11,7 @@ class OutputView {
 
     fun printRacingResults(cars: List<Car>) {
         cars.forEach { car ->
-            print(OutputConst.RECENT_DISTANCE.message.format(car))
+            print(OutputConst.RECENT_DISTANCE.message.format(car.name))
             for(i in 0..car.distance) print(OutputConst.DISTANCE_UNIT.message)
             println()
         }
@@ -19,6 +19,6 @@ class OutputView {
     }
 
     fun printWinner(cars: List<Car>) {
-        print(OutputConst.WINNER.message.format(cars))
+        print(OutputConst.WINNER.message.format(cars.joinToString(", ") { it.name }))
     }
 }
