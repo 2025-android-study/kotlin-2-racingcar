@@ -1,8 +1,8 @@
 package racingcar.constants
 
-enum class OutputConstants(message: String) {
+enum class OutputConst(val message: String) {
     RESULT("실행 결과"),
-    CAR_MOVING("%s : "),
+    RECENT_DISTANCE("%s : "),
     DISTANCE_UNIT("-"),
     WINNER("최종 우승자 : %s")
 }
