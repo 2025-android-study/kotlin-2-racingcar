@@ -24,6 +24,7 @@ class RacingCar {
         for (i: Int in 0 until tryNum) {
             racingOneStep(carMovementInfos) // 차수별 실행 결과
         }
+        outputView.printWinner(carMovementInfos) // 최종 우승자 출력
     }
 
     private fun racingOneStep(carMovementInfos: List<CarMovementInfo>) {
