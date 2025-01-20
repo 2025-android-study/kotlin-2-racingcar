@@ -2,7 +2,7 @@ package racingcar.view
 
 import camp.nextstep.edu.missionutils.Console
 import racingcar.config.GameRule
-import racingcar.util.InputConverter
+import racingcar.util.Converter
 import racingcar.util.InputValidator
 
 class InputView {
@@ -12,7 +12,7 @@ class InputView {
         println(INPUT_CAR_NAMES)
         val input = Console.readLine()
         validator.validateCarNamesInput(input)
-        return InputConverter.getCarsNames(input)
+        return Converter.getCarsNames(input)
     }
 
     fun readTryNumber(): Int {
