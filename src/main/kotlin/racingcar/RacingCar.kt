@@ -7,5 +7,6 @@ class RacingCar {
 
     fun startRacing() {
         val carNames = inputView.readCarNames()
+        val tryNum = inputView.readTryNumber()
     }
 }
