@@ -11,7 +11,7 @@ class InputValidator {
         require(cars.size >= Rule.MIN_NAME_LENGTH ) { ErrorConst.ERROR_CAR_NUM.message }
         for(car in cars) {
             require(isEnglish(car)) { ErrorConst.ERROR_VALUE.message }
-            require(car.length > Rule.MAX_NAME_LENGTH) { ErrorConst.ERROR_LENGTH.message }
+            require(car.length <= Rule.MAX_NAME_LENGTH) { ErrorConst.ERROR_LENGTH.message }
         }
 
     }
@@ -19,7 +19,7 @@ class InputValidator {
     fun validateTryNum(tryNum: String) {
         require(isNumber(tryNum)) { ErrorConst.ERROR_NOT_NUMBER }
 
-        require(tryNum.toInt() == Rule.MIN_RACING) { ErrorConst.ERROR_VALUE }
+        require(tryNum.toInt() >= Rule.MIN_RACING) { ErrorConst.ERROR_VALUE }
     }
 
     private fun isEnglish(input: String): Boolean = input.all { ch -> ch.isLetter() }

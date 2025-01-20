@@ -2,5 +2,5 @@ package racingcar.model
 
 data class Car(
     val name: String,
-    val distance: Int
+    var distance: Int = 0
 )
